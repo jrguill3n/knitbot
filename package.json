@@ -1,0 +1,17 @@
+{
+  "name": "knitbot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node Bot.js"
+  },
+  "author": "RG",
+  "license": "MIT",
+  "dependencies": {
+    "cross-fetch": "^3.1.5",
+    "discord.js": "^13.6.0",
+    "dotenv": "^16.0.0",
+    "node-fetch": "^3.2.3"
+  }
+}
