@@ -28,10 +28,17 @@ const replies = [
 ]
 
 const boo = [
-  './boo/1.jpeg',
-  './boo/2.jpeg',
-  './boo/3.jpeg',
-  './boo/4.jpeg'
+  'boo/1.jpeg',
+  'boo/2.jpeg',
+  'boo/3.jpeg',
+  'boo/4.jpeg',
+  'boo/5.jpeg',
+  'boo/6.jpeg',
+  'boo/7.jpeg',
+  'boo/8.jpeg'
+  'boo/9.jpeg',
+  'boo/10.jpeg',
+  'boo/11.jpeg'
 ]
 
 client.on('message', gotMessage);
