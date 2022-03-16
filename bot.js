@@ -27,6 +27,13 @@ const replies = [
   'Anti Discord Discord Club'
 ]
 
+const boo = [
+  './boo/1.jpeg',
+  './boo/2.jpeg',
+  './boo/3.jpeg',
+  './boo/4.jpeg'
+]
+
 client.on('message', gotMessage);
 
 async function gotMessage(msg) {
@@ -70,7 +77,9 @@ async function gotMessage(msg) {
     const index = Math.floor(Math.random() * json.results.length);
     msg.channel.send(json.results[index].url);
 
+  } else if (tokens[0] === "!boogang") {
+    const index = Math.floor(Math.random() * replies.length);
+    msg.channel.send(boo[index]);
   }
-
 
 }
