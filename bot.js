@@ -53,13 +53,16 @@ async function gotMessage(msg) {
   let tokens = msg.cleanContent.split(" ");
 
   if (tokens[0] === "!knit") {
+
     const index = Math.floor(Math.random() * replies.length);
     msg.channel.send(replies[index]);
+
   } else if (tokens[0] == "!gif") {
 
     if (tokens.length > 1) {
       keywords = tokens.slice(1, tokens.length).join(" ");
     }
+
     let url = `https://api.tenor.com/v1/search?q=${keywords}&key=${process.env.TENOR_KEY}`;
     let response = await fetch(url);
     let json = await response.json();
@@ -68,9 +71,6 @@ async function gotMessage(msg) {
 
   } else if (tokens[0] == "!bellend") {
 
-    if (tokens.length > 1) {
-     // keywords = tokens.slice(1, tokens.length).join(" ");
-    }
     let url = `https://api.tenor.com/v1/search?q=bellend&key=${process.env.TENOR_KEY}`;
     let response = await fetch(url);
     let json = await response.json();
@@ -79,9 +79,6 @@ async function gotMessage(msg) {
 
   } else if (tokens[0] == "!jabroni") {
 
-    if (tokens.length > 1) {
-     // keywords = tokens.slice(1, tokens.length).join(" ");
-    }
     let url = `https://api.tenor.com/v1/search?q=jabroni&key=${process.env.TENOR_KEY}`;
     let response = await fetch(url);
     let json = await response.json();
@@ -89,11 +86,14 @@ async function gotMessage(msg) {
     msg.channel.send(json.results[index].url);
 
   } else if (tokens[0] === "!boogang") {
+
     const index = Math.floor(Math.random() * replies.length);
     msg.channel.send({ files: [ boo[index]] });
     
   } else if (tokens[0] === "!vern") {
+
     msg.channel.send({ files: ['img/vern.gif'] });
+    
   }
 
 }
