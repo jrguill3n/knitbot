@@ -35,12 +35,11 @@ const boo = [
   'boo/5.jpeg',
   'boo/6.jpeg',
   'boo/7.jpeg',
-  'boo/8.jpeg'
+  'boo/8.jpeg',
   'boo/9.jpeg',
   'boo/10.jpeg',
   'boo/11.jpeg',
-  'boo/12.gif',
-  
+  'boo/12.gif'
 ]
 
 client.on('message', gotMessage);
