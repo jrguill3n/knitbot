@@ -91,9 +91,9 @@ async function gotMessage(msg) {
   } else if (tokens[0] === "!boogang") {
     const index = Math.floor(Math.random() * replies.length);
     msg.channel.send({ files: [ boo[index]] });
-  }
-  else if (tokens[0] === "!vern") {
-    msg.channel.send({ files: [ 'img/vern.gif'] });
+    
+  } else if (tokens[0] === "!vern") {
+    msg.channel.send({ files: ['img/vern.gif'] });
   }
 
 }
