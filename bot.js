@@ -87,7 +87,7 @@ async function gotMessage(msg) {
 
   } else if (tokens[0] === "!boogang") {
     const index = Math.floor(Math.random() * replies.length);
-    msg.channel.send(boo[index]);
+    msg.channel.send(message.channel.send({ files: [ boo[index]] }));
   }
 
 }
