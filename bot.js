@@ -60,7 +60,7 @@ async function gotMessage(msg) {
     if (tokens.length > 1) {
       keywords = tokens.slice(1, tokens.length).join(" ");
     }
-    let url = `https://api.tenor.com/v1/random?q=${keywords}&key=${process.env.TENOR_KEY}`;
+    let url = `https://api.tenor.com/v1/search_suggestions?q=${keywords}&key=${process.env.TENOR_KEY}`;
     let response = await fetch(url);
     let json = await response.json();
     const index = Math.floor(Math.random() * json.results.length);
@@ -83,6 +83,17 @@ async function gotMessage(msg) {
      // keywords = tokens.slice(1, tokens.length).join(" ");
     }
     let url = `https://api.tenor.com/v1/random?q=jabroni&key=${process.env.TENOR_KEY}`;
+    let response = await fetch(url);
+    let json = await response.json();
+    const index = Math.floor(Math.random() * json.results.length);
+    msg.channel.send(json.results[index].url);
+
+  } else if (tokens[0] == "!entrepreneur") {
+
+    if (tokens.length > 1) {
+     // keywords = tokens.slice(1, tokens.length).join(" ");
+    }
+    let url = `https://api.tenor.com/v1/random?q=tai+lopez&key=${process.env.TENOR_KEY}`;
     let response = await fetch(url);
     let json = await response.json();
     const index = Math.floor(Math.random() * json.results.length);
