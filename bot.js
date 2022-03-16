@@ -64,7 +64,9 @@ async function gotMessage(msg) {
     let response = await fetch(url);
     let json = await response.json();
     const index = Math.floor(Math.random() * json.results.length);
-    msg.channel.send(json.results[index].url);
+    let knitembed = new Discord.MessageEmbed()
+    .attachFiles(json.results[index].url)
+    msg.channel.send(knitembed);
 
   } else if (tokens[0] == "!bellend") {
 
