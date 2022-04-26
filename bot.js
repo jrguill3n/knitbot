@@ -16,7 +16,8 @@ const replies = [
   '🧶',
   'wen moon',
   'jabroni',
-  'Anti Discord Discord Club'
+  'Anti Discord Discord Club',
+  'love you kp'
 ]
 
 const boo = [
