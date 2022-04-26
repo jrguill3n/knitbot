@@ -1,14 +1,6 @@
-// Posting GIFs
-// Discord Bots
-
-console.log('Beep beep! 🤖');
-
 require('dotenv').config();
-
 const fetch = require("cross-fetch");
-
 const Discord = require('discord.js');
-
 const { Client, Intents } = require('discord.js');
 const client = new Client({ intents: [Intents.FLAGS.GUILDS,Intents.FLAGS.GUILD_MESSAGES] });
 
@@ -93,7 +85,7 @@ async function gotMessage(msg) {
   } else if (tokens[0] === "!vern") {
 
     msg.channel.send({ files: ['img/vern.gif'] });
-    
+
   }
 
 }
